@@ -14,13 +14,7 @@ public class Main
 
    lastFirstN(word1, word2, N);
 
-    Scanner scan = new Scanner(System.in);
-   System.out.println("Input two words");
-   String word1 = scan.nextLine();
-   String word2 = scan.nextLine();
-   
-   System.out.println("Give a number");
-   int N = scan.nextInt(); 
+   stringManip("unicorn","rainbow"); 
   
   }
 
@@ -44,13 +38,14 @@ public class Main
   */
   public static void stringManip(String s1, String s2)
   {
-   String case;
    String upperCase;
    String upperLower;
 
   
    upperCase = s1.toUpperCase();
-   upperLower = 
+   upperLower = s2.substring(0,1).toUpperCase() + s2.substring(1).toLowerCase();
+   System.out.printf("Your two words are %n%s%n%s%n  ", upperCase, upperLower);
+
 
    
    
@@ -61,7 +56,17 @@ public class Main
   */
   public static String removeStr(String s1, String s2)
   {
-    String output = null;
+    String output;
+    String before; 
+    String after; 
+    
+    int indexofs2 = s1.indexof(s2);
+    int indexofEnds2 = indexOfs2 + s2.length();
+
+    before = s1.substring(0,indexofs2);
+    after = s1. substring( indexOfEnds1);
+
+    output = before + after;
     return output;
   }
 }
